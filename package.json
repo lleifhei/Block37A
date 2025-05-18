@@ -1,0 +1,27 @@
+{
+  "name": "block37a",
+  "version": "1.0.0",
+  "description": "Unit 4 Career Sim",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lleifhei/Block37A.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lleifhei/Block37A/issues"
+  },
+  "homepage": "https://github.com/lleifhei/Block37A#readme",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.0"
+  }
+}
