@@ -1,19 +1,23 @@
 const express = require('express')
-const cors = require('cors')
-const authRoutes = require('./routes/authRoutes');
-const dotenv = require('dotenv')
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const itemRoutes = require('./routes/items');
+const commentRoutes = require('./routes/comments');
 
-dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT || 3000
 
-app.use(cors())
+
 app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/api/users', userRoutes)
+app.use('/api/items', itemRoutes)
+app.use('/api/comments', commentRoutes)
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`)
-})
+
+app.listen(3000, () => {  
+    console.log('Server is running on port 3000')
+}
+)
+module.exports = app
